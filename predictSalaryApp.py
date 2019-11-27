@@ -5,7 +5,13 @@ locale.setlocale(locale.LC_ALL, '')
 
 import pickle
 import numpy as np
-model = pickle.load(open('salaryPrediction.pkl', 'rb'))
+
+with open("salaryPrediction.pkl", 'rb') as f:
+    model = pickle.load(f, encoding="latin1")
+
+
+#model = pickle.load(open('salaryPrediction.pkl', 'rb'), encoding='latin1')
+
 
 
 app = Flask(__name__)
