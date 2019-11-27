@@ -30,8 +30,6 @@ ghp-import==0.4.1
 google-api-python-client==1.7.8
 google-auth==1.6.3
 google-auth-httplib2==0.0.3
-GraphLab-Create==2.1
-GraphLab-Create-License==2.1
 gunicorn==19.10.0
 httplib2==0.12.1
 ipaddress==1.0.22
