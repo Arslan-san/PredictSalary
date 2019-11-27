@@ -3,9 +3,9 @@ import numpy as np
 import locale
 locale.setlocale(locale.LC_ALL, '') 
 
-from joblib import dump, load
+import pickle
 import numpy as np
-model = load('salaryPrediction.joblib')
+model = pickle.load(open('salaryPrediction.pkl', 'rb'))
 
 
 app = Flask(__name__)
