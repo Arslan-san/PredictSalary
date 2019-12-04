@@ -17,8 +17,11 @@ elif python_ver == 3:
 	# for python version 3
 	with open("salaryPrediction_with_multiple_features.pkl", 'rb') as f:
 	    multiple_features_model = pickle.load(f, encoding="latin1")
-	    one_feature_model = pickle.load(open('salaryPrediction_with_one_feature.pkl', 'rb'))
+	
+	with open("salaryPrediction_with_one_feature.pkl", 'rb') as g:
+	    one_feature_model = pickle.load(g, encoding="latin1")
 
+	
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = '5791628bb0b13ce0c676dfde280ba245'
