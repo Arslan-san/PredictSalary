@@ -1,0 +1,55 @@
+{% extends 'layout.html'%}
+
+{% block content %}
+
+		<section id="cover" class="min-vh-100">
+		    <div id="cover-caption">
+		        <div class="container">
+		            <div class="row text-white">
+		                <div class="col-xl-5 col-lg-6 col-md-8 	col-sm-10 mx-auto text-center form p-4">
+		                	{% with messages = get_flashed_messages(with_categories=true) %}
+							    {% if messages %}
+							        {% for category, message in messages %}
+							            <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
+							                {{ message }}
+							             	<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+							             	<span aria-hidden="true">&times;</span>
+							             	
+							            </div>
+							        {% endfor %}
+							    {% endif %}
+							{% endwith %}
+
+
+		                    <!-- <h3 class="display-4 py-2 text-truncate"> Predict Salary </h3> -->
+		                    <h4 class="py-2 text-truncate"> Predict Salary With One Feature </h4>
+		                    <div class="px-2">
+
+		                        <form action="" method = "POST" class="justify-content-center">
+		                            <div class="form-group">
+		                                <label class="sr-only"> Experience </label>
+		                                <!-- value="{{ request.form['experience'] }}" -->
+		                                <input type="text"  pattern="[^a-zA-Z]+" onkeypress="return blockSpecialChar(event)" name="experience" class="form-control" placeholder="Experience" required>
+		                            </div>
+		                            <!-- <input type="submit" value="Predict" class="form-control btn btn-primary btn-lg"> -->
+		                            <button type="submit" class="form-control btn btn-primary btn-lg"> Predict </button>
+		                        </form>             	
+
+		                    </div>
+
+		                    {% if predicted_salary %}
+		                    	<br>
+		                    	<h4> Your salary must be ${{predicted_salary}}  with {{experience}} years of experience </h4>
+
+		                    	<h5> <p> (plus/minus $3,500) </p> </h5>
+
+		                    	 
+		                    {% endif %}		                    
+
+		                </div>
+		            </div>
+		        </div>
+		    </div>
+		</section> 	
+
+{% endblock %}

@@ -1,0 +1,45 @@
+/*!
+ * Start Bootstrap - Stylish Portfolio v5.0.7 (https://startbootstrap.com/template-overviews/stylish-portfolio)
+ * Copyright 2013-2019 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-stylish-portfolio/blob/master/LICENSE)
+ */body,
+
+html {
+	width: 100%;
+	height: 100%
+}
+
+body {
+	font-family: 'Source Sans Pro'
+}
+
+
+.masthead {
+	min-height: 30rem;
+	position: relative;
+	display: table;
+	width: 100%;
+	height: auto;
+	padding-top: 8rem;
+	padding-bottom: 8rem;
+	background: linear-gradient(90deg, rgba(255, 255, 255, .1) 0, rgba(255, 255, 255, .1) 100%), url(../img/AI3.jpg);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover
+}
+
+
+@media (min-width:992px) {
+	.masthead {
+		height: 100vh
+	}
+	.masthead h1 {
+		font-size: 5.5rem
+	}
+}
+
+
+a {
+	color: #ff0000/*#1d809f*/
+}
+

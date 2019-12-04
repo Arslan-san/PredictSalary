@@ -2,60 +2,48 @@
 
 {% block content %}
 
+  <header class="masthead d-flex">
+    <div class="container  my-auto">
+      <p>
+        <font size="8">
+          <b>
+            Salary Prediction Platform  
+          </b>
+          
+        </font>  
+      </p>
+      
+      <h3 class="mb-5">      
+        <ul>
+          <a href="/salary-prediction-with-multiple-features"> 
+            <u> 
+              <li>
+                <p>
+                  <em>Salary prediction with multiple features</em>
+                </p>
+                
+              </li> 
+            </u>  
+          </a>
 
-		<section id="cover" class="min-vh-100">
-		    <div id="cover-caption">
-		        <div class="container">
-		            <div class="row text-white">
-		                <div class="col-xl-5 col-lg-6 col-md-8 col-sm-10 mx-auto text-center form p-4">
-		                	{% with messages = get_flashed_messages(with_categories=true) %}
-							    {% if messages %}
-							        {% for category, message in messages %}
-							            <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
-							                {{ message }}
-							             	<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-							             	<span aria-hidden="true">&times;</span>
-							             	
-							            </div>
-							        {% endfor %}
-							    {% endif %}
-							{% endwith %}
-
-
-		                    <h1 class="display-4 py-2 text-truncate"> Predict Salary </h1>
-		                    <div class="px-2">
-
-		                        <form action="" method = "POST" class="justify-content-center">
-		                            <div class="form-group">
-		                                <label class="sr-only"> Experience </label>
-		                                <!-- value="{{ request.form['experience'] }}" -->
-		                                <input type="text"  pattern="[^a-zA-Z-,]+" onkeypress="return blockSpecialChar(event)" name="experience" class="form-control" placeholder="Experience (0 - 15)" required>
-		                            </div>
-		                            <div class="form-group">
-		                                <label class="sr-only"> Test Score </label>
-		                                <!-- value="{{ request.form['test_score'] }}" -->
-		                                <input type="text" pattern="[^a-zA-Z]+" onkeypress="return blockSpecialChar(event)" name="test_score" class="form-control" placeholder="Test Score (1 - 10)" required>
-		                            </div>
-		                            <div class="form-group">
-		                                <label class="sr-only"> Interview Score </label>
-		                                <!-- value="{{ request.form['interview_score'] }}" -->
-		                                <input type="text" pattern="[^a-zA-Z]+" onkeypress="return blockSpecialChar(event)" name="interview_score" class="form-control" placeholder="Interview Score (1 - 10)" required>
-		                            </div>
-		                            <!-- <input type="submit" value="Predict" class="form-control btn btn-primary btn-lg"> -->
-		                            <button type="submit" class="form-control btn btn-primary btn-lg"> Predict </button>
-		                        </form>             	
-
-		                    </div>
-
-		                    {% if predicted_salary %}
-		                    	<br>
-		                    	<h4> Your salary should be ${{predicted_salary}} </h4>
-		                    {% endif %}		                    
-
-		                </div>
-		            </div>
-		        </div>
-		    </div>
-		</section> 	
+          <a href="/salary-prediction-with-one-feature"> 
+            <u> 
+              <li>
+                <p>
+                  <em>Salary prediction with one feature</em>  
+                </p>
+                
+              </li> 
+            </u> 
+          </a>
+          
+          
+        </ul> 
+      </h3>
+    </div>
+    <div class="overlay"></div>
+  </header>
 
 {% endblock %}
+
+

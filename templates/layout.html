@@ -9,19 +9,23 @@
 	    <script type="text/javascript">
 	        function blockSpecialChar(e) {
 	            var k = e.keyCode;
-	            return ((k > 64 && k < 91) || (k > 96 && k < 123) || k == 8   || (k >= 48 && k <= 57));
-
-	        }
+	            return ((k > 64 && k < 91) || (k > 96 && k < 123) || k == 8   || k == 46   || k == 45   || (k >= 48 && k <= 57));	        }
 	    </script>
 
 		<!-- Required meta tags -->
 	    <meta charset="utf-8">
 	    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-	    <!-- Bootstrap CSS -->
-	    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	   	<!-- Below commented line used for fetching bootstrap file from internet at runtime -->
 
+	    <!-- Bootstrap CSS -->
+<!-- 	    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+ -->
+
+ 		<!-- Bootstrap Core CSS -->
+  		<link href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+		<link href="{{ url_for('static', filename='css/stylish.min.css') }}" rel="stylesheet">
 
 	</head>
 	
