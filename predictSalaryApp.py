@@ -53,7 +53,7 @@ def prediction_with_multiples():
 			return redirect(url_for('prediction_with_multiples'))
 
 
-		prepared_features_for_model = np.asarray(features_values, dtype=np.int64)
+		prepared_features_for_model = np.asarray(features_values, dtype=np.float64)
 		prediction = multiple_features_model.predict([prepared_features_for_model])
 
 		predicted_salary = '{:n}'.format(int(prediction[0]))
